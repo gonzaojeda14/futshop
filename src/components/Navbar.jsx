@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CartWidget from './CartWidget.js';
 import {
   Collapse,
   Navbar,
@@ -52,7 +53,7 @@ const Navbar_ = (props) => {
             </UncontrolledDropdown>
           </Nav>
         </Collapse>
-        <NavbarBrand className= "cart" href="/"><img className= "cartImg" src="https://www.electrofriolorca.com/wp-content/uploads/2020/06/blancomp.png" /></NavbarBrand>
+        <NavbarBrand className= "cart" href="/"><CartWidget/></NavbarBrand>
       </Navbar>
     </header>
   );

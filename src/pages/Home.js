@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar_ from '../components/Navbar.jsx';
-import ItemListContainer from '../components/ItemListContainer.js';
+import ItemListContainer from '../container/ItemListContainer.js';
 
 function Home ()  {
     return (

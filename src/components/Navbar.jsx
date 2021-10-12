@@ -50,9 +50,6 @@ const Navbar_ = (props) => {
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
-            <NavItem>
-              <NavLink className="botonMenu" href="/components/">Contacto</NavLink>
-            </NavItem>
           </Nav>
         </Collapse>
         <NavbarBrand className= "cart" href="/"><img className= "cartImg" src="https://www.electrofriolorca.com/wp-content/uploads/2020/06/blancomp.png" /></NavbarBrand>

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+header {
+  background-color: #5E9ABF;
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  z-index: 10;
+  top: 0px;
+}
+
+.navbar {
+  margin-left: 50px;
+  width: 100%;
+}
+
+.nav {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 200px;
+}
+
+.logo {
+  font-family: 'Staatliches', cursive;
+  margin-top: 14px;
+  font-size: 1.8rem;
+  color: #111111;
+}
+
+.botonMenu {
+  font-size: 0.9rem;
+  font-family: 'Staatliches', cursive;
+}
+
+.cart {
+  width: 7%;
+  margin-right: 50%;
+
+}
+
+.cartImg {
+  width: 100%;
+}
+
+.card {
+  margin-left: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.cardTitle{
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.cardDesc{
+  font-size: 0.7rem;
+}
+
+.price {
+  margin-left: 80px;
+  font-size: 1.2rem;
+  display: inline-block;
+}

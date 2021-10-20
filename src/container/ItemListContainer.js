@@ -1,26 +1,37 @@
-import React from 'react';
-import {Card,
-        Button} 
-  from 'react-bootstrap';
+import React, { useEffect, useState } from "react"; 
+import ItemList from '../components/ItemList.js'
+//import products from '../products/products.js';
 
-const ItemListContainer = ({image,title,description,price}) => {
-    return (
-        <div>
-           <Card className="card" style={{ width: '18rem' }} border="info">
-          <Card.Img variant="top" src={image} />
-          <Card.Header><p className="cardTitle">{title}</p></Card.Header>
-          <Card.Body>
-           <Card.Text>
-            <p className="cardDesc">{description}</p>
-            </Card.Text>
-           <Button variant="info">Ver más</Button>
-           <Card.Text className="price">
-            {price}
-            </Card.Text>
-            </Card.Body>
-            </Card> 
-        </div>
-    )
-}
+
+const ItemListContainer = (id,image,title,brand,description,price) => {
+  const [products,setProducts] = useState();
+  useEffect(() => {
+    const promise = new Promise ((resolve, reject) => {
+     setTimeout(() => {
+       resolve(products)
+     }, 2000)
+     });
+  
+     promise.then((result) => {
+       setProducts(result)
+     })
+    },
+     []
+     );
+  
+  return (
+    <>
+  <ItemList
+        id={id}
+        image={image}
+        title={title} 
+        brand={brand}
+        description={description}
+        price={price}
+   />
+
+   </>
+  )}
+
 
 export default ItemListContainer;

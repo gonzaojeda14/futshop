@@ -40,23 +40,47 @@ header {
 
 }
 
+.shop{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
 .cartImg {
   width: 100%;
 }
 
 .card {
-  margin-left: 100px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: 100px 0px 100px 100px;
+  padding-top: 10px;
+}
+
+.divTitle{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .cardTitle{
   font-size: 0.9rem;
-  margin-top: 10px;
+  margin: 10px 0px 10px 0px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cardBrand{
+  font-size: 0.9rem;
+  margin-left: 100px;
 }
 
 .cardDesc{
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  font-weight: lighter;
 }
 
 .price {
@@ -64,3 +88,4 @@ header {
   font-size: 1.2rem;
   display: inline-block;
 }
+

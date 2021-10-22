@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from "react"; 
 import ItemList from '../components/ItemList.js'
-//import products from '../products/products.js';
+import listOfProducts from '../products/products.js';
 
 
-const ItemListContainer = (id,image,title,brand,description,price) => {
-  const [products,setProducts] = useState();
+const ItemListContainer = () => {
+  const [products,setProducts] = useState([]);
+
   useEffect(() => {
     const promise = new Promise ((resolve, reject) => {
      setTimeout(() => {
-       resolve(products)
+       resolve(listOfProducts)
      }, 2000)
      });
   
-     promise.then((result) => {
-       setProducts(result)
+     promise.then((listOfProducts) => {
+       setProducts(listOfProducts)
      })
     },
      []
@@ -21,14 +22,7 @@ const ItemListContainer = (id,image,title,brand,description,price) => {
   
   return (
     <>
-  <ItemList
-        id={id}
-        image={image}
-        title={title} 
-        brand={brand}
-        description={description}
-        price={price}
-   />
+  <ItemList products={products}/>
 
    </>
   )}

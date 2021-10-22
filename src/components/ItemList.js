@@ -1,33 +1,17 @@
 import React from 'react'
-import products from '../products/products.js';
-import {Card,
-  Button} 
-from 'react-bootstrap';
+import Item from './Item.js'
 
-
-const ItemList = () => {
+const ItemList = ({products}) => {
     return (
       <>
-    {products?.map((products) => 
-
-     <div className="id" key={products.id}>
-     <Card className="card" style={{ width: '18rem' }} border="info">
-    <Card.Img variant="top" src={products.image} />
-    <Card.Header><p className="cardTitle">{products.title}</p></Card.Header>
-    <Card.Body>
-    <Card.Text>
-         <p className="cardBrand">{products.brand}</p>
-         </Card.Text>
-     <Card.Text>
-      <p className="cardDesc">{products.description}</p>
-      </Card.Text>
-     <Button variant="info">Ver más</Button>
-     <Card.Text className="price">
-      {products.price}
-      </Card.Text>
-      </Card.Body>
-      </Card> 
-    </div>
+    {products?.map((producto) => 
+ 
+    <Item key={producto.id} 
+          image={producto.image}
+          title={producto.title} 
+          brand={producto.brand} 
+          description={producto.description} 
+          price={producto.price} />
     )}
 
       </>

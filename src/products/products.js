@@ -1,4 +1,4 @@
-const products = [
+const data = [
 {id: 1, 
  image:"https://www.stockcenter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwcf3bf7b1/products/AD_FS6565/AD_FS6565-1.JPG",
  title: "Camiseta titular Selección Argentina", 
@@ -21,4 +21,4 @@ const products = [
     price: "$9699"}
 ];
 
-export default products;
+export default data;

@@ -3,9 +3,9 @@ import {Card,
     Button} 
 from 'react-bootstrap';
 
-const Item = (image,title,description,price) => {
+const Item = ({id, image, title, brand, description, price}) => {
     return (
-        <div className="id">
+        <div className="id" key={id}>
         <Card className="card" style={{ width: '18rem' }} border="info">
        <Card.Img variant="top" src={image} />
        <Card.Header className="divTitle"><p className="cardTitle">{title}</p></Card.Header>

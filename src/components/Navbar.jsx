@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import CartWidget from './CartWidget.js';
+import React, { useState } from "react";
+import CartWidget from "./CartWidget.js";
 import {
   Collapse,
   Navbar,
@@ -7,56 +7,70 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-} from 'reactstrap';
+} from "reactstrap";
+import { Link } from "react-router-dom";
+import categories from "../categories/categories";
+import links from "../links/links";
 
-const Navbar_ = (props) => {
+const Navbar_ = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
     <header>
-      <Navbar className= "navbar" light expand="md">
-        <NavbarBrand href="/"><p className="logo">FUTSHOP</p></NavbarBrand>
+      <Navbar className="navbar" light expand="md">
+        <NavbarBrand>
+          <Link to={"/inicio"} className="linkLogo">
+            {" "}
+            <p className="logo">FUTSHOP</p>{" "}
+          </Link>
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto nav" navbar>
-            <NavItem>
-              <NavLink className="botonMenu" href="/components/">Inicio</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink className="botonMenu" href="/components/">Nosotros</NavLink>
-            </NavItem>
+          <Nav className="mr-auto nav ul" navbar>
+            {links.map((link) => (
+              <NavItem>
+                <Link to={link.address} className="botonMenu" key={link.id}>
+                  {link.title}
+                </Link>
+              </NavItem>
+            ))}
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle className="botonMenu" nav caret>
-                Productos
+              <DropdownToggle nav caret>
+                <Link to={"/camisetas"} className="botonProd">
+                  {" "}
+                  Camisetas{" "}
+                </Link>
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem className="botonMenu">
-                  Camisetas
-                </DropdownItem>
-                <DropdownItem className="botonMenu">
-                  Shorts
-                </DropdownItem>
-                <DropdownItem className="botonMenu">
-                  Remeras
-                </DropdownItem>
-                <DropdownItem className="botonMenu">
-                  Buzos
-                </DropdownItem>
+                {categories.map((cat) => (
+                  <DropdownItem>
+                    <Link
+                      to={cat.address}
+                      className="botonCat"
+                      key={cat.id}
+                      exact
+                      activeclassName="activeclass"
+                    >
+                      {cat.title}{" "}
+                    </Link>
+                  </DropdownItem>
+                ))}
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
         </Collapse>
-        <NavbarBrand className= "cart" href="/"><CartWidget/></NavbarBrand>
+        <NavbarBrand className="cart" href="/">
+         <CartWidget/>
+        </NavbarBrand>
       </Navbar>
     </header>
   );
-}
+};
 
 export default Navbar_;

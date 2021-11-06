@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Zen+Maru+Gothic:wght@700&display=swap');
 
 header {
   background-color: #5E9ABF;
@@ -28,11 +28,19 @@ header {
   text-decoration: none;
 }
 
+.nav-link{
+  padding-top : 0px;
+}
+
 .logo {
   font-family: 'Staatliches', cursive;
   margin-top: 14px;
   font-size: 1.8rem;
   color: #111111;
+}
+
+.logo:hover {
+  color: white;
 }
 
 
@@ -95,7 +103,7 @@ header {
 }
 
 .cardTitle {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin: 10px 0px 10px 0px;
   font-weight: bold;
   text-align: center;
@@ -126,3 +134,16 @@ header {
   font-family: 'Zen Maru Gothic', sans-serif;
 }
 
+.tituloDet{
+  font-family: 'Heebo', sans-serif;;
+}
+
+.rowOferta{
+  width: 5rem;
+  height: 1.3rem;
+}
+
+.divLoading{
+  margin-left: 400px;
+  font-family: 'Heebo', sans-serif;;
+}

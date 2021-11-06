@@ -19,7 +19,7 @@ function Banner() {
               to={"/camisetas"}
               className="flex items-center justify-center px-4 py-2 no-underline border border-transparent rounded-md shadow-sm text-xs font-medium text-blue-500 bg-white hover:bg-indigo-50"
             >
-              Ver más
+              Ver tienda
             </NavLink>
           </div>
         </div>

@@ -32,7 +32,7 @@ const Navbar_ = () => {
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto nav ul" navbar>
+          <Nav className="mr-auto nav" navbar>
             {links.map((link) => (
               <NavItem>
                 <Link to={link.address} className="botonMenu" key={link.id}>
@@ -41,11 +41,11 @@ const Navbar_ = () => {
               </NavItem>
             ))}
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                <Link to={"/camisetas"} className="botonProd">
+            <DropdownToggle nav _caret_>
+                <div className="botonProd">
                   {" "}
                   Camisetas{" "}
-                </Link>
+                </div>
               </DropdownToggle>
               <DropdownMenu right>
                 {categories.map((cat) => (
@@ -54,8 +54,6 @@ const Navbar_ = () => {
                       to={cat.address}
                       className="botonCat"
                       key={cat.id}
-                      exact
-                      activeclassName="activeclass"
                     >
                       {cat.title}{" "}
                     </Link>
